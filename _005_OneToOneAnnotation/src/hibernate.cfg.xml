@@ -1,0 +1,40 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+    "-//Hibernate/Hibernate Configuration DTD//EN"
+    "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<!-- http://www.hibernate.org/xsd/hibernate-configuration hibernate-configuration-4.0.xsd   -->
+<hibernate-configuration>
+    <session-factory>
+        <!--
+        Database connection settings -->
+		<!--
+		<property name="connection.driver_class">com.mysql.jdbc.Driver</property>
+        <property name="connection.url">jdbc:mysql://localhost:3306/my_db</property>
+        -->
+        
+        <property name="connection.driver_class">org.postgresql.Driver</property>
+        <property name="connection.url">jdbc:postgresql://localhost:5432/my_db</property>
+        <property name="connection.username">root</property>
+        <property name="connection.password">toor</property>
+
+        <!-- SQL dialect -->
+        <property name="dialect">org.hibernate.dialect.PostgreSQLDialect</property>
+
+        <!-- Echo all executed SQL to stdout -->
+        <property name="show_sql">true</property>
+
+        <!-- Drop and re-create the database schema on startup -->
+        <property name="hbm2ddl.auto">update</property>
+        <!--    <property name="hbm2ddl.auto">create</property> -->
+
+        
+	    <!-- Mapping files -->
+		<!--
+		<mapping resource="tr/com/huseyinaydin/map/Ogrenci.hbm.xml" /> 
+	    <mapping resource="tr/com/huseyinaydin/map/OgrenciBilgisi.hbm.xml" />
+	    -->
+	     
+	   <mapping class = "tr.com.huseyinaydin.map.Ogrenci" /> 
+	   <mapping class = "tr.com.huseyinaydin.map.OgrenciBilgisi" />
+    </session-factory>
+</hibernate-configuration>
