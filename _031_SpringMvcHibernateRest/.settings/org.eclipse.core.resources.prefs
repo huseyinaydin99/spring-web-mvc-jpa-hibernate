@@ -1,0 +1,9 @@
+eclipse.preferences.version=1
+encoding//src/main/java/tr/com/huseyinaydin/config/SpringBeanConfig.java=UTF-8
+encoding//src/main/java/tr/com/huseyinaydin/config/SpringWebAppInitalizer.java=UTF-8
+encoding//src/main/java/tr/com/huseyinaydin/controller/PersonelController.java=UTF-8
+encoding//src/main/java/tr/com/huseyinaydin/controller/PersonelRestController.java=UTF-8
+encoding//src/main/java/tr/com/huseyinaydin/dao/PersonelDAO.java=UTF-8
+encoding//src/main/java/tr/com/huseyinaydin/dao/PersonelDAOImpl.java=UTF-8
+encoding//src/main/java/tr/com/huseyinaydin/model/Personel.java=UTF-8
+encoding//src/main/java/tr/com/huseyinaydin/model/PersonelList.java=UTF-8
