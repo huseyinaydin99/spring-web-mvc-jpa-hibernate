@@ -1,0 +1,7 @@
+eclipse.preferences.version=1
+encoding//src/main/java/org/turkeyjug/config/SpringBeanConfig.java=UTF-8
+encoding//src/main/java/org/turkeyjug/config/SpringWebAppInitalizer.java=UTF-8
+encoding//src/main/java/org/turkeyjug/controller/PersonelController.java=UTF-8
+encoding//src/main/java/org/turkeyjug/dao/PersonelDAO.java=UTF-8
+encoding//src/main/java/org/turkeyjug/dao/PersonelDAOImpl.java=UTF-8
+encoding//src/main/java/org/turkeyjug/model/Personel.java=UTF-8
