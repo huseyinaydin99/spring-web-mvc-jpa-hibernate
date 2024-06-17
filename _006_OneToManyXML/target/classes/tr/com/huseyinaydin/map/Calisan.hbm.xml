@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="tr.com.huseyinaydin.map.Calisan" table="calisan">
+		<id name="calisanId" column="CALISAN_ID">
+			<generator class="native" />
+		</id>
+
+		<property name="calisanAdi" column="CALISAN_ADI" />
+
+		<property name="calisanSoyadi">
+			<column name="CALISAN_SOYADI" length="60" />
+		</property>
+
+		<many-to-one name="departman" class="tr.com.huseyinaydin.map.Departman" fetch="select">
+			<column name="departman_id" not-null="true" />
+		</many-to-one>
+	</class>
+</hibernate-mapping>
