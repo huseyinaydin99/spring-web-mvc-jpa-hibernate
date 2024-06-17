@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.2.xsd
+		http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-4.2.xsd">
+
+	<aop:aspectj-autoproxy />
+
+	<bean id="personelBean" class="tr.com.huseyinaydin.model.Personel">
+		<property name="adi" value="Hüseyin"></property>
+		<property name="soyadi" value="Aydın"></property>
+		<property name="yasi" value="29"></property>
+	</bean>
+
+	<bean id="personelAopVazifeleriBean" class="tr.com.huseyinaydin.services.PersonelAopVazifeleri">
+	</bean>
+
+	<bean id="metotOncesiVazifelerBeforeBean" class="tr.com.huseyinaydin.services.MetotOncesiVazifelerBefore">
+	</bean>
+	<bean id="metotSonrasiVazifelerAfterReturningBean" class="tr.com.huseyinaydin.services.MetotSonrasiVazifelerAfterReturning">
+	</bean>
+
+	<bean id="metotIstisnaSonrasiVazifelerAfterThrowingBean" class="tr.com.huseyinaydin.services.MetotIstisnaSonrasiVazifelerAfterThrowing">
+	</bean>
+
+	<bean id="metotOncesiVeSonrasiVazifelerAroundBean" class="tr.com.huseyinaydin.services.MetotOncesiVeSonrasiVazifelerAround">
+	</bean>
+
+	<bean id="personelProxyFactoryBean" class="org.springframework.aop.framework.ProxyFactoryBean">
+		<property name="target" ref="personelBean"></property>
+		<property name="interceptorNames">
+			<list>
+				<value>metotOncesiVazifelerBeforeBean</value>
+				<value>metotSonrasiVazifelerAfterReturningBean</value>
+				<value>metotIstisnaSonrasiVazifelerAfterThrowingBean</value>
+				<value>metotOncesiVeSonrasiVazifelerAroundBean</value>
+			</list>
+		</property>
+	</bean>
+</beans>
