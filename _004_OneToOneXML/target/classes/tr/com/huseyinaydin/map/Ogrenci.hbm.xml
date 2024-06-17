@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+
+
+<hibernate-mapping>
+	<class name="tr.com.huseyinaydin.map.Ogrenci" table="ogrenci">
+		<id name="ogrenciId" type="java.lang.Integer">
+			<column name="OGRENCI_ID" />
+			<generator class="identity" />
+		</id>
+
+		<property name="ogrenciAdi">
+			<column name="OGRENCI_ADI" length="60" />
+		</property>
+
+		<property name="ogrenciSoyadi">
+			<column name="OGRENCI_SOYADI" length="60" />
+		</property>
+
+		<one-to-one name="ogrenciBilgisi"
+			class="tr.com.huseyinaydin.map.OgrenciBilgisi" cascade="save-update" />
+	</class>
+</hibernate-mapping>
